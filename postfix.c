@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void push(int s[], int *top, intn ele);
+void push(int s[], int *top, int ele);
 int pop(int s[], int *top)
 
 void main(){
