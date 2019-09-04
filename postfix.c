@@ -1,14 +1,14 @@
 #include<stdio.h>
 
 void push(int s[], int *top, int ele);
-int pop(int s[], int *top)
+int pop(int s[], int *top);
 
 void main(){
     char exp[20], e;
-    int i, int stack[20], top=-1;
+    int i, stack[20], top=-1;
 
 
-    printf("Enter the postfix expression");
+    printf("Enter the postfix expression\n");
     gets(exp);
 
     i=0;
@@ -20,8 +20,8 @@ void main(){
         }
 
         else{
-            num1 = pop();
-            num2 = pop();
+            int num1 = pop(stack, &top);
+            int num2 = pop(stack, &top);
 
             switch (e)
             {
@@ -50,6 +50,8 @@ void main(){
 
 
     }
+    
+    printf("The result of the Expression is %d", pop(stack, &top));
 }
 
 void push(int s[], int *top, int ele){
