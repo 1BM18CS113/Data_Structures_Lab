@@ -30,7 +30,7 @@ void enqueue(int q[], int *f, int *r){
 	int ele;
 	if((*r == MAX-1 && *f == 0)||(*r == (*f)-1 && *f>0)){
 	        printf("%d, %d\n", *r, *f);
-			printf("QUEUE FULL\n");
+			printf("QUEUE IS FULL\n");
 		
 	}
 	
@@ -62,19 +62,19 @@ void dequeue(int q[], int *f, int *r){
 		printf("QUEUE EMPTY\n");
 	}	
 	if(*f==*r){
-		printf("%d", q[*f]);
+		printf("%d\n", q[*f]);
 		*r=-1;
 		*f=0;
 		
 	}
 	else{
 		if(*f==MAX -1){
-			printf("%d", q[*f]);
+			printf("%d\n", q[*f]);
 			*f = 0;
 			
 		}
 		else {
-			printf("%d", q[(*f)++]);
+			printf("%d\n", q[(*f)++]);
 		}
 	}
 }
@@ -82,23 +82,22 @@ void dequeue(int q[], int *f, int *r){
 void display(int q[], int *f, int *r){
 	int i, j;
 	if(*f==0&&*r==-1){
-		printf("QUEUE EMPOTY");
+		printf("QUEUE EMPOTY\n");
 	}
 	if(*f>*r){
 		for(i=0; i<=*r; i++){
-			printf("%d", q[i]);
+			printf("%d\n", q[i]);
 		}
 		for(j=*f; j<=MAX-1; j++){
-			printf("%d", q[j]);
+			printf("%d\n", q[j]);
 		}
 	}
 	else{
 		for(i=*f; i<=*r;i++){
-			printf("%d", q[i]);
+			printf("%d\n", q[i]);
 		}
 	}
 }
-
 
 
 
