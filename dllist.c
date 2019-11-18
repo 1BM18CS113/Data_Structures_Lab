@@ -22,7 +22,7 @@ int main()
 {
 	int ch,ele,pos;
 	do {
-		printf(" \n\n1. front\n 2 insert end\n 3 display\n 4 insert pos\n 5 deletefront\n 6 deleteend\n 7 delete pos\n ");
+		printf(" \n\n1.Insert at front\n4. insert at pos\n3. display\n7. delete ele\n ");
 		scanf("%d",&ch);
 		switch(ch)
 		{
@@ -189,6 +189,9 @@ node del_ele(node head,int ele) {
 	node temp=head;
 	if(head==NULL) {
 		printf("Empty\n");
+	}
+	else if(head->rlink == NULL){
+		return NULL;
 	}
   else {
 		while(temp->data!=ele && temp->rlink!=NULL)
